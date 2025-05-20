@@ -15,17 +15,15 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Botón de menú (siempre visible cuando está cerrado) */}
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed top-4 left-4 z-50 bg-[#0033A0] text-white p-2 rounded-full shadow-lg hover:bg-[#002080] transition sm:hidden"
+          className="fixed top-4 left-4 z-50 bg-[#0033A0] text-white p-2 rounded-full shadow-lg hover:bg-[#002080] transition"
         >
           <Menu size={24} />
         </button>
       )}
 
-      {/* Overlay oscuro (solo en móviles) */}
       {open && (
         <div
           className="fixed inset-0 bg-black/40 z-40 sm:hidden"
@@ -33,7 +31,6 @@ export default function Sidebar() {
         />
       )}
 
-      {/* Sidebar deslizable */}
       <aside
         className={`fixed top-0 left-0 z-50 h-screen w-64 bg-[#FFCC00] shadow-lg transition-transform duration-300
         ${open ? "translate-x-0" : "-translate-x-full"} sm:translate-x-0`}
@@ -50,9 +47,10 @@ export default function Sidebar() {
             />
             <span className="text-lg font-bold">SGC Coppel</span>
           </div>
+          {/* ✅ Botón de cerrar ahora visible siempre */}
           <button
             onClick={() => setOpen(false)}
-            className="text-black hover:text-[#0033A0] transition sm:hidden"
+            className="text-black hover:text-[#0033A0] transition"
           >
             <X size={24} />
           </button>
@@ -64,7 +62,6 @@ export default function Sidebar() {
           <SidebarLink href="/empresa" icon={<Building size={20} />} label="Empresa" />
           <SidebarLink href="/proyecto" icon={<FileText size={20} />} label="Proyecto" />
 
-          {/* Submenú Calidad */}
           <details
             className={`group px-1 text-sm font-medium ${pathname.startsWith("/calidad") ? "text-[#0033A0]" : "text-black"}`}
             open={pathname.startsWith("/calidad")}
@@ -73,7 +70,6 @@ export default function Sidebar() {
               <LayoutList size={20} />
               <span>Calidad</span>
             </summary>
-
             <nav className="ml-6 mt-1 space-y-1 text-sm">
               <SidebarLink href="/calidad/mision" icon={null} label="Misión" />
               <SidebarLink href="/calidad/politica" icon={null} label="Política" />
@@ -82,7 +78,6 @@ export default function Sidebar() {
             </nav>
           </details>
 
-          {/* Submenú Procesos */}
           <details
             className={`group px-1 text-sm font-medium ${pathname.startsWith("/procesos") ? "text-[#0033A0]" : "text-black"}`}
             open={pathname.startsWith("/procesos")}
@@ -91,7 +86,6 @@ export default function Sidebar() {
               <FileText size={20} />
               <span>Procesos</span>
             </summary>
-
             <nav className="ml-6 mt-1 space-y-1 text-sm">
               <SidebarLink href="/procesos/conclusion" icon={null} label="Conclusión" />
               <SidebarLink href="/procesos/oportunidades" icon={null} label="Oportunidades" />
