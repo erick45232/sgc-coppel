@@ -1,7 +1,7 @@
 export default function Mision() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-100 to-blue-100 p-6">
-      <div className="max-w-5xl mx-auto bg-white shadow-xl rounded-2xl px-4 py-8 sm:px-6 md:px-8 space-y-10">
+      <div className="max-w-5xl mx-auto bg-white text-gray-900 shadow-xl rounded-2xl p-8 space-y-10">
         <h1 className="text-3xl sm:text-4xl font-bold text-center text-blue-800">Misión</h1>
 
         <section>
