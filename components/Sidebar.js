@@ -13,7 +13,6 @@ export default function Sidebar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(true);
 
-  // 🧠 Detecta si estás en móvil para iniciar cerrado
   useEffect(() => {
     if (typeof window !== "undefined") {
       const isMobile = window.innerWidth < 640;
@@ -23,7 +22,6 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Botón para abrir el menú */}
       {!open && (
         <button
           onClick={() => setOpen(true)}
@@ -33,7 +31,6 @@ export default function Sidebar() {
         </button>
       )}
 
-      {/* Fondo oscuro para móviles */}
       {open && (
         <div
           className="fixed inset-0 bg-black/40 z-40 sm:hidden"
@@ -41,7 +38,6 @@ export default function Sidebar() {
         />
       )}
 
-      {/* Sidebar */}
       <aside
         className={`fixed top-0 left-0 z-50 h-screen w-64 bg-[#FFCC00] shadow-lg transition-transform duration-300
         ${open ? "translate-x-0" : "-translate-x-full"}`}
@@ -105,7 +101,26 @@ export default function Sidebar() {
             </nav>
           </details>
 
-          <SidebarLink href="/normas" icon={<ShieldCheck size={20} />} label="Normas" />
+          {/* Submenú Normas */}
+          <details
+            className={`group px-1 text-sm font-medium ${pathname.startsWith("/normas") ? "text-[#0033A0]" : "text-black"}`}
+            open={pathname.startsWith("/normas")}
+          >
+            <summary className="flex items-center gap-3 py-2 px-2 cursor-pointer hover:text-[#0033A0] text-black">
+              <ShieldCheck size={20} />
+              <span>Normas</span>
+            </summary>
+            <nav className="ml-6 mt-1 space-y-1 text-sm">
+              <SidebarLink href="/normas/nom001" icon={null} label="NOM-001" />
+              <SidebarLink href="/normas/nom002" icon={null} label="NOM-002" />
+              <SidebarLink href="/normas/nom018" icon={null} label="NOM-018" />
+              <SidebarLink href="/normas/nom019" icon={null} label="NOM-019" />
+              <SidebarLink href="/normas/nom026" icon={null} label="NOM-026" />
+              <SidebarLink href="/normas/nom035" icon={null} label="NOM-035" />
+              <SidebarLink href="/normas/nom036" icon={null} label="NOM-036" />
+            </nav>
+          </details>
+
           <SidebarLink href="/contacto" icon={<Phone size={20} />} label="Contacto" />
         </nav>
       </aside>
