@@ -121,6 +121,9 @@ export default function Sidebar() {
             </nav>
           </details>
 
+          {/* Mapa de Procesos */}
+          <SidebarLink href="/mapa" icon={<FileText size={20} />} label="Mapa de Procesos" />
+          {/* Contacto */}
           <SidebarLink href="/contacto" icon={<Phone size={20} />} label="Contacto" />
         </nav>
       </aside>
