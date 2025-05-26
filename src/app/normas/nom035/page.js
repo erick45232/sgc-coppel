@@ -58,6 +58,7 @@ export default function NOM035Page() {
             el centro de trabajo mantiene condiciones adecuadas y saludables, con un nivel de riesgo psicosocial <strong>predominantemente bajo o despreciable</strong>.
           </p>
           <p className="mt-2">  
+          
           <p>...en el apartado de &quot;Factores de riesgo psicosocial&quot; y &quot;Entorno organizacional favorable&quot;...</p>
             donde se identifica un riesgo bajo, derivado principalmente de aspectos relacionados con la carga de trabajo y la falta de control sobre el mismo.
           </p>
@@ -88,7 +89,7 @@ export default function NOM035Page() {
             capacitar al personal sobre el entorno organizacional favorable y asegurar la existencia de mecanismos formales para atender quejas y sugerencias.
           </p>
         </section>
-
+ 
       </div>
     </div>
   );
