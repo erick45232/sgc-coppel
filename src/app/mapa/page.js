@@ -16,7 +16,7 @@ export default function MapaProcesosPage() {
             Es importante tener en cuenta que las entradas de un proceso son generalmente las salidas de otros procesos, y las salidas de un proceso son generalmente las entradas de otros procesos.
           </p>
           <p>
-            De igual forma, la Norma <strong>ISO 9001:2015</strong>, en el apartado de "Sistema de Gestión de la Calidad y sus procesos", establece como requisito el establecer, implementar, mantener y mejorar continuamente un sistema de gestión de la calidad, incluidos los procesos necesarios y sus interacciones.
+            De igual forma, la Norma <strong>ISO 9001:2015</strong>, en el apartado de &quot;Sistema de Gestión de la Calidad y sus procesos&quot;, establece como requisito el establecer, implementar, mantener y mejorar continuamente un sistema de gestión de la calidad, incluidos los procesos necesarios y sus interacciones.
             <span className="block mt-1 italic text-sm text-gray-600">Chávez Henández, 2020</span>
           </p>
         </section>
@@ -38,4 +38,3 @@ export default function MapaProcesosPage() {
     </div>
   );
 }
-
