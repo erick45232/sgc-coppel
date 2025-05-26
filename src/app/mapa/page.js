@@ -33,7 +33,6 @@ export default function MapaProcesosPage() {
             />
           </div>
         </section>
-
       </div>
     </div>
   );

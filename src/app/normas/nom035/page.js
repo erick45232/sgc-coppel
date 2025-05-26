@@ -57,8 +57,8 @@ export default function NOM035Page() {
             El análisis de los resultados conforme a la NOM-035-STPS-2018 indica que, en términos generales,
             el centro de trabajo mantiene condiciones adecuadas y saludables, con un nivel de riesgo psicosocial <strong>predominantemente bajo o despreciable</strong>.
           </p>
-          <p className="mt-2">
-            No obstante, se observa un área de atención específica en la categoría de <strong>"Factores propios de la actividad"</strong>,
+          <p className="mt-2">  
+          <p>...en el apartado de &quot;Factores de riesgo psicosocial&quot; y &quot;Entorno organizacional favorable&quot;...</p>
             donde se identifica un riesgo bajo, derivado principalmente de aspectos relacionados con la carga de trabajo y la falta de control sobre el mismo.
           </p>
           <p className="mt-2">
