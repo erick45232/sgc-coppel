@@ -19,6 +19,8 @@ export default function Proyecto() {
             <li>Hernández Vázquez Angelli Amairany</li>
             <li>Martínez González Melissa</li>
             <li>Lopez Alvarez Alejandrina</li>
+            <li>Ramirez Hernández Jose Alberto</li>
+            <li>Quinto Villa Edwin Yahir</li>
           </ul>
           <p className="mt-2">Carrera: Ingeniería en Gestión Empresarial</p>
           <p>Asignaturas: Gestión de Sistemas de Calidad y Gestión de Riesgos y Seguridad Corporativa</p>
